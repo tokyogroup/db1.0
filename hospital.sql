@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50643
 File Encoding         : 65001
 
-Date: 2019-04-11 17:34:29
+Date: 2019-04-11 17:56:36
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -40,7 +40,7 @@ CREATE TABLE `t_medicine` (
   `m_id` varchar(50) NOT NULL,
   `m_name` varchar(50) DEFAULT NULL,
   `m_spec` varchar(30) DEFAULT NULL,
-  `m_price` varchar(50) DEFAULT NULL,
+  `m_price` double(11,0) DEFAULT NULL,
   `m_function` varchar(100) DEFAULT NULL,
   `m_addr` varchar(100) DEFAULT NULL,
   `m_count` varchar(100) DEFAULT NULL,
