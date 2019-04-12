@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50640
 File Encoding         : 65001
 
-Date: 2019-04-12 09:27:37
+Date: 2019-04-12 10:04:38
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -25,14 +25,15 @@ CREATE TABLE `t_case` (
   `c_date` varchar(30) DEFAULT NULL,
   `c_result` varchar(100) DEFAULT NULL,
   `c_method` varchar(255) DEFAULT NULL,
+  `c_status` int(11) DEFAULT NULL,
   PRIMARY KEY (`c_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_case
 -- ----------------------------
-INSERT INTO `t_case` VALUES ('c001', 'uu123', 'u0002', '2019-10-30 13:11:11', '感冒', '吃药');
-INSERT INTO `t_case` VALUES ('c002', 'uu444', 'u0002', '2019-10-30 13:11:11', '拉肚', '去厕所');
+INSERT INTO `t_case` VALUES ('c001', 'uu123', 'u0002', '2019-10-30 13:11:11', '感冒', '吃药', '0');
+INSERT INTO `t_case` VALUES ('c002', 'uu444', 'u0002', '2019-10-30 13:11:11', '拉肚', '去厕所', '0');
 
 -- ----------------------------
 -- Table structure for `t_medicine`
