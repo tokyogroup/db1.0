@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : dong
-Source Server Version : 50640
+Source Server         : www.ineeke.cn
+Source Server Version : 50643
 Source Host           : localhost:3306
 Source Database       : hospital
 
 Target Server Type    : MYSQL
-Target Server Version : 50640
+Target Server Version : 50643
 File Encoding         : 65001
 
-Date: 2019-04-12 10:04:38
+Date: 2019-04-12 11:19:56
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -22,7 +22,7 @@ CREATE TABLE `t_case` (
   `c_id` varchar(50) NOT NULL,
   `pi_id` varchar(50) DEFAULT NULL,
   `u_id` varchar(50) DEFAULT NULL,
-  `c_date` varchar(30) DEFAULT NULL,
+  `c_date` datetime DEFAULT NULL,
   `c_result` varchar(100) DEFAULT NULL,
   `c_method` varchar(255) DEFAULT NULL,
   `c_status` int(11) DEFAULT NULL,
@@ -43,7 +43,7 @@ CREATE TABLE `t_medicine` (
   `m_id` varchar(50) NOT NULL,
   `m_name` varchar(50) DEFAULT NULL,
   `m_spec` varchar(30) DEFAULT NULL,
-  `m_price` varchar(50) DEFAULT NULL,
+  `m_price` double(11,0) DEFAULT NULL,
   `m_function` varchar(100) DEFAULT NULL,
   `m_addr` varchar(100) DEFAULT NULL,
   `m_count` varchar(100) DEFAULT NULL,
@@ -53,9 +53,9 @@ CREATE TABLE `t_medicine` (
 -- ----------------------------
 -- Records of t_medicine
 -- ----------------------------
-INSERT INTO `t_medicine` VALUES ('yaopin123', '板蓝根', '一级', '28.9', '治疗感冒', '杭州皮革厂', '999');
-INSERT INTO `t_medicine` VALUES ('yaopin183', '皮炎平', '二级', '8.9', '治疗皮肤', '杭州大拉皮场', '999');
-INSERT INTO `t_medicine` VALUES ('yaopin222', '金嗓子', '三级', '5.0', '治疗喉咙', '杭州面包厂', '999');
+INSERT INTO `t_medicine` VALUES ('yaopin123', '板蓝根', '一级', null, '治疗感冒', '杭州皮革厂', '999');
+INSERT INTO `t_medicine` VALUES ('yaopin183', '皮炎平', '二级', null, '治疗皮肤', '杭州大拉皮场', '999');
+INSERT INTO `t_medicine` VALUES ('yaopin222', '金嗓子', '三级', null, '治疗喉咙', '杭州面包厂', '999');
 
 -- ----------------------------
 -- Table structure for `t_order`
@@ -139,8 +139,8 @@ CREATE TABLE `t_registration` (
   `pi_id` varchar(50) NOT NULL,
   `u_id` varchar(50) NOT NULL,
   `u_id2` varchar(50) NOT NULL,
-  `rg_price` varchar(50) NOT NULL,
-  `rg_date` date DEFAULT NULL,
+  `rg_price` double(11,0) NOT NULL,
+  `rg_date` datetime DEFAULT NULL,
   `rg_status` int(11) NOT NULL,
   PRIMARY KEY (`rg_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -148,8 +148,8 @@ CREATE TABLE `t_registration` (
 -- ----------------------------
 -- Records of t_registration
 -- ----------------------------
-INSERT INTO `t_registration` VALUES ('rg123', 'uu123', 'u0003', 'u0002', '5.0', '2019-10-30', '0');
-INSERT INTO `t_registration` VALUES ('rg444', 'uu444', 'u0003', 'u0002', '5.0', '2019-04-10', '1');
+INSERT INTO `t_registration` VALUES ('rg123', 'uu123', 'u0003', 'u0002', '5', '2019-10-30 00:00:00', '0');
+INSERT INTO `t_registration` VALUES ('rg444', 'uu444', 'u0003', 'u0002', '5', '2019-04-10 00:00:00', '1');
 
 -- ----------------------------
 -- Table structure for `t_section`
