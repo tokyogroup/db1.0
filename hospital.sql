@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50643
 File Encoding         : 65001
 
-Date: 2019-04-12 11:19:56
+Date: 2019-04-12 13:37:17
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -83,7 +83,7 @@ CREATE TABLE `t_patients` (
   `pi_id` varchar(50) NOT NULL,
   `pi_name` varchar(50) DEFAULT NULL,
   `pi_sex` varchar(2) DEFAULT NULL,
-  `pi_age` varchar(10) DEFAULT NULL,
+  `pi_age` int(11) DEFAULT NULL,
   PRIMARY KEY (`pi_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
